@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>project 15</title>
+  </head>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+:root {
+     --clr-full-black:#111111;
+     --clr-left-tile-black :#181818;
+     --clr-middle-tiles-black:#1E1E1E;
+     --clr-tile-red :red;
+     --clr-white:#FFFFFF;
+     --clr-number-red:red;
+     --clr-btn-red:red;
+}
+
+ul {
+     list-style: none;
+}
+
+
+
+
+.mb-1 {
+     margin-bottom: 1rem;
+}
+
+ .mb-2 {
+     margin-bottom: 2rem;
+ }
+ .red-me {
+     font-weight: bold;
+     color: var(--clr-tile-red);
+ }
+
+ .pd-rl-4{
+     padding: 0rem 4rem;
+ }
+
+ .btn {
+     padding: 1rem 2rem;
+     cursor: pointer;
+     background-color: var(--clr-btn-red);
+     color: white;
+     font-weight: bold;
+     text-transform: uppercase;
+     border: none;
+ }
+
+ .ww-80 {
+     width: 80vw;
+     display: block;
+     margin: auto;
+ }
+
+ h2{
+     font-weight: 900;
+ }
+
+
+ body {
+     font-family: 'Montserrat', sans-serif;
+     background-color: var(--clr-full-black);
+     color: var(--clr-white);
+ }
+
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 2rem 4rem;
+ }
+ 
+ .navbar nav ul {
+     display: flex;
+     text-transform: uppercase;
+ }
+
+ nav ul li {
+     margin: 0rem 1.5rem;
+     cursor: pointer;
+ }
+ nav ul li:hover {
+     color: var(--clr-tile-red);
+ }
+
+ .logo-img {
+     width: 6rem;
+     filter: invert(50%) sepia(97%) saturate(6997%) hue-rotate(342deg) brightness(96%) contrast(87%);
+ }
+
+ .header-main {
+     display: flex;
+     align-items: center;
+ }
+
+ .left-header {
+     flex: 1;
+ }
+ .right-header {
+     flex: 2;
+     padding-right: 5rem;
+ }
+ .right-header h1{
+     font-size: 3.5rem;
+     padding: 0.5rem 0rem;
+ }
+
+ .left-header img {
+     width: 34rem;
+     margin: 0rem 0rem 0.5rem 5rem;
+     float: right;
+ }
+
+ .right-header button {
+     margin-top: 2rem;
+ }
+
+ .services-section {
+  
+     background-color: var(--clr-left-tile-black);
+  
+     width: 50vw;
+     left: 0;
+     z-index: -1;
+     padding-top: 2rem;
+     padding-bottom: 4rem;
+ }
+
+ .service-cards {
+     display: flex;
+     justify-content: center;
+     width: 100vw;
+     align-items: center;
+     margin: 3rem 0rem;
+     flex-wrap: wrap;
+ }
+
+ .card {
+     background-color: var(--clr-middle-tiles-black);
+     padding: 2.5rem;
+     width: 18rem;
+     margin: 2rem 0.8rem;
+     height: 19rem;
+ }
+
+ .service-card-2 {
+     background-color: var(--clr-tile-red);
+ }
+
+ .card-2-img {
+     width: 6rem;
+ }
+
+ .our-history {
+     display: flex;
+     width:90vw;
+     align-items: center;
+     justify-content: center;
+     margin-left: 5vw;
+ }
+
+ .our-experience {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: end;
+     justify-content: center;
+     margin-left: 2rem;
+   
+ }
+
+ .our-experience-year {
+     font-size: 6rem;
+     color: var(--clr-number-red);
+     font-weight: 800;
+     margin-right: 4rem;
+ }
+
+ .clients-experience {
+     flex: 2;
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     margin-left: 2rem;
+ }
+
+ .client-card {
+     background: var(--clr-middle-tiles-black);
+     margin: 1rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 18rem;
+     height: 8rem;
+ }
+
+ .client-card h2 {
+     font-size: 2.5rem;
+     color: var(--clr-number-red);
+ }
+
+ .featured-head {
+     display: flex;
+     justify-content: space-between;
+     margin: 4rem 6rem;
+ }
+
+ .featured-head-left h2 {
+     margin-bottom: 0.5rem;
+ }
+
+ .featured-cards {
+     display: flex;
+     flex-wrap: wrap;
+     margin: 4rem 5rem;
+ }
+ .feature-card {
+     margin: 1rem;
+ }
+
+ .feature-card h2{
+     margin-bottom: 0.5rem;
+ }
+
+ .feature-image {
+     padding: 4rem 2rem;
+     background: var(--clr-middle-tiles-black);
+ }
+ .feature-img {
+     width: 23rem;
+ }
+
+ .feature-image-4 {
+     padding: 5.14rem 2rem;
+ }
+  .lets-work-section {
+     display: flex;
+     background-color: var(--clr-left-tile-black);
+     align-items: center;
+     padding: 2rem 2rem;
+     height: 16rem;
+     width: 66vw;
+     margin-bottom: 4rem;
+  }
+  .lets-work-left{
+     flex: 2;
+     padding-right: 5rem;
+  }
+  .lets-work-right{
+     flex: 1;
+     display: flex;
+     justify-content: center;
+  }
+  .lets-work-left h1 {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+  }
+   .footer{
+     display: block;
+     margin: auto;
+   }
+   .footer-top ul{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 2rem 0;
+   }
+   .footer-top ul li {
+     margin: 1rem;
+     text-transform: uppercase;
+   }
+   .footer-bottom img{
+     width: 5rem;
+   }
+
+   .footer-bottom {
+     display: flex;
+     background-color: var(--clr-middle-tiles-black);
+     padding: 3rem 15rem;
+   }
+   .social-icons img {
+     width: 2rem;
+     background-color: white;
+     margin-left: 1rem;
+     border-radius: 50%;
+     
+   }
+   .social-icons{
+     margin-left: 16rem;
+   }
+.ham {
+    display: none;
+}
+
+.hero-para{
+    word-spacing:5px ; 
+    line-height :1.5rem
+}
+.right-header-p {
+    font-size:1.2rem
+}
+
+.btn:hover {
+    background-color: #FF334394;
+}
+
+.social-icons svg, .logo {
+    cursor: pointer;
+}
+
+.cursor {
+    cursor:pointer
+}
+
+@media only screen and  (max-width:1380px){
+    
+    .featured-cards {
+        justify-content: center;
+    }
+    .feature-img{
+        width: 21rem;
+    }
+}
+@media only screen and  (max-width:1200px){
+    .client-card {
+        width: 15rem;
+    }
+}
+@media only screen and  (max-width:1000px){
+    .card {
+        width: 16rem;
+    }
+    .client-card {
+        width: 13rem;
+    }
+    .client-card h2 {
+        font-size: 1.5rem;
+    }
+    .our-experience-year {
+        font-size: 4rem;
+    }
+    .our-experience h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and  (max-width:1150px){
+    .navbar nav ul {
+        display: none;
+    }
+    .ham {
+        display: flex;
+        width: 3rem;
+        height:5px;
+        background-color: brown;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .lets-work-left h1{
+        font-size: 2rem;
+    }
+
+    .ham::before,.ham::after {
+        content: "";
+        width: 3rem;
+        height: 5px;
+        background-color: brown;
+        position: absolute;
+    }
+
+    .ham::before{
+        top: 1rem;
+    }
+
+    .ham::after{
+        bottom: 1rem;
+    }
+
+    .left-header img{
+        width: 30rem;
+    }
+    .right-header {
+        font-size: 3rem;
+    }
+    .hero-para{
+        word-spacing:2px ;  
+        line-height :1.2rem;
+        font-size: 1rem;
+    }
+    .featured-head-left p {
+        width: 20rem;
+    }
+    
+}
+
+
+
+@media only screen and  (max-width:930px){
+    .header-main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-header {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin: 2rem 0rem;
+        padding-right: 0;
+    }
+    .left-header img {
+        width: 25rem;
+        margin: 0;
+    }
+
+    .our-history {
+        margin-left:0 ;
+    }
+
+    .clients-experience {
+        flex-direction: column;
+    }
+    .client-card {
+        width: 16rem;
+    }
+
+    .lets-work-section {
+        height: auto;
+        width: auto;
+        max-width: 80vw;
+    }
+    .footer-bottom  {
+        padding: 3rem 10rem;
+    }
+    .social-icons {
+        margin-left: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 60vw;
+    }
+    .social-icons svg {
+        margin: 0rem 0.5rem;
+    }
+
+}
+
+
+@media only screen and  (max-width:620px){
+    .our-history {
+        display: flex;
+        flex-direction: column;
+    }
+    .our-experience {
+        margin-bottom: 2rem;
+    }
+    .service-cards {
+        flex-direction: column;
+    }
+    .featured-head {
+        margin: 4rem 0;
+    }
+    .feature-img {
+        width: 15rem;
+    }
+    .featured-head-left P {
+        width: 12rem;
+    }
+    .btn {
+        padding: 0.8rem 1rem;
+    }
+    .card 
+     {
+        margin: 1rem;
+    }
+
+    .lets-work-section {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .lets-work-left {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    .footer-bottom  {
+        padding: 3rem 6rem;
+    }
+    
+}
+
+@media only screen and  (max-width:400px){
+    .ham,
+    .ham::after,
+    .ham::before {
+        width: 2rem;
+        height: 3px;
+    }
+    .ham::after {
+        bottom: 0.6rem;
+    }
+    .ham::before {
+        top: 0.6rem;
+    }
+
+    .navbar {
+        margin: 2rem;
+    }
+    .left-header img {
+        width: 16rem;
+    }
+    .right-header-p {
+        font-size: 1rem;
+    }
+    .right-header h1 {
+        font-size: 2rem;
+    }
+    .hero-para {
+        font-size: 0.8rem;
+    }
+    .card,.client-card {
+        width: 14rem;
+    }
+    .featured-head-left h1 {
+        font-size: 0.8rem;
+    }
+    .featured-head-left p {
+        width: 10rem;
+    }
+
+    .feature-image {
+        padding: 3rem 1rem;
+    }
+    .feature-img {
+        width: 10rem;
+    }
+
+    .lets-work-left h1 {
+        font-size: 1.2rem;
+    }
+    .lets-work-left p {
+        font-size: 0.8rem;
+    }
+    .footer-top ul {
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+    .footer-top ul li{
+        margin: 0.3rem;
+    }
+    .footer-bottom  {
+        padding: 2rem 0rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-icons {
+        margin-top: 1rem;
+    }
+    .social-icons svg {
+        margin: 0rem 0.5rem;
+    }
+}
+img.logo {
+    width: 100px;
+    
+    filter: invert(50%) sepia(97%) saturate(6997%) hue-rotate(342deg) brightness(96%) contrast(87%);
+}
+
+  </style>
+  <body>
+  
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./Images/white-Logo.png" class="logo-img" alt="nav-logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>Home </li>
+            <li>Project</li>
+            <li>about</li>
+            <li>contact</li>
+            <li>Other page</li>
+          </ul>
+          <div class="ham"></div>
+        </nav>
+      </div>
+      <div class="header-main pd-rl-4">
+        <div class="left-header">
+          <img src="./images/Untitled design (35).png" alt="" />
+        </div>
+        <div class="right-header ">
+          <p class="red-me right-header-p" >Hello I'm Arthur</p>
+          <h1>Visual Designer</h1>
+          <p class="hero-para">
+           
+            We connect your brand & business with your target <br />market in the
+            most desirable, refined, and elvated way <br />
+            possible throught the digital medium<br />
+          </p>
+          <button class="btn">about me</button>
+        </div>
+      </div>
+    </header>
+    <section class="services-section">
+        <div class="service-cards">
+            <div class="card">
+                <img src="./images/svgs/Logo.png" class="mb-1 logo-img" alt="">
+                <h2 class="mb-1">UI DESIGN</h2>
+                <p class="mb-1">Lorem ipsum dolor sit amet, consevtetur adipiscing elit.</p>
+                <p class="red-me">KNOW MORE  <span class="right-arrow">&#8594</span> </p>
+            </div>
+            <div class="card service-card-2">
+                <img src="./images/svgs/Logo.png" class="mb-1 card-2-img" alt="">
+                <h2 class="mb-1">Product DESIGN</h2>
+                <p class="mb-1">Lorem ipsum dolor sit amet, consevtetur adipiscing elit.</p>
+                <p >KNOW MORE  <span class="right-arrow">&#8594</span> </p>
+            </div>
+            <div class="card">
+                <img src="./images/svgs/Logo.png" class="mb-1 logo-img" alt="">
+                <h2 class="mb-1">Branding</h2>
+                <p class="mb-1">Lorem ipsum dolor sit amet, consevtetur adipiscing elit.</p>
+                <p class="red-me">KNOW MORE  <span class="right-arrow">&#8594</span> </p>
+            </div>
+        </div>
+        <div class="our-history">
+            <div class="our-experience">
+                <p class="our-experience-year">12</p>
+                <h2>Years Experience</h2>
+            </div>
+            <div class="clients-experience">
+                <div class="client-card">
+                    <h2>60+</h2>
+                    <p>clients</p>
+                </div>
+                <div class="client-card">
+                    <h2 >08</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="client-card">
+                    <h2 >122+</h2>
+                    <p>Completed Projects</p>
+                </div>
+                <div class="client-card">
+                    <h2>10</h2>
+                    <p>Achievments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured ww-80">
+        <div class="featured-head">
+            <div class="featured-head-left">
+                <h1>FEATURED PROJECTS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="featured-head-right">
+                <button class="btn">View all</button>
+            </div>
+        </div>
+        <div class="featured-cards">
+            <div class="feature-card ">
+                <div class="feature-image mb-1">
+                    <img src="./images/Screenshot 2022-06-25 131915.jpg" alt="" class="feature-img">
+                </div>
+                <h2>The Vintage</h2>
+                <p class="red-me cursor">KNOW MORE <span class="right-arrow"> &#8594</span> </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image mb-1">
+                    <img src="./images/Screenshot 2022-06-25 132031.jpg" alt="" class="feature-img">
+                </div>
+                <h2>Foodasa</h2>
+                <p class="red-me cursor">KNOW MORE <span class="right-arrow"> &#8594</span> </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image mb-1">
+                    <img src="./images/Screenshot 2022-06-25 133016.jpg" alt="" class="feature-img">
+                </div>
+                <h2>Marco Accent</h2>
+                <p class="red-me cursor">KNOW MORE <span class="right-arrow"> &#8594</span> </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image feature-image-4 mb-1">
+                    <img src="./images/Screenshot 2022-06-25 133426.jpg" alt="" class="feature-img">
+                </div>
+                <h2>Mozaik</h2>
+                <p class="red-me cursor">KNOW MORE <span class="right-arrow"> &#8594</span> </p>
+            </div>
+        </div>
+    </section>
+    <section class="lets-work-section ww-80">
+        <div class="lets-work-left">
+            <h1>Let's work together on your next project </h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Morbi mollis augue eget mauris consectetur rutrm.</p>
+        </div>
+        <div class="lets-work-right">
+            <button class="btn">Contact</button>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="footer-top">
+            <ul>
+                <li>HOME</li>
+                <li>about</li>
+                <li>project</li>
+                <li>contact</li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="logo">
+                <img src="./images/svgs/Logo.png" alt="" class="logo-img">
+            </div>
+            <div class="social-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="icon icon-tabler icon-tabler-brand-facebook" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="icon icon-tabler icon-tabler-brand-twitter" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-brand-youtube" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="3" y="5" width="18" height="14" rx="4" />
+                    <path d="M10 9l5 3l-5 3z" />
+                  </svg>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+    var doRelocation = function() {
+    
+        var currentWidth = window.innerWidth,
+            breakpoint = 800,
+            newLocation = 'index.html';
+    
+        if (currentWidth > breakpoint) {
+            window.location.replace(newLocation);
+        }
+    
+    }
+    
+    doRelocation();
+    
+    window.addEventListener('resize', doRelocation);
+    
+    </script>
+</html>

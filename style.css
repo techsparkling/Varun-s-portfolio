@@ -1,0 +1,267 @@
+* {
+    font-family: montserrat, sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  body > header > nav {
+    float: left;
+    
+    position: relative;
+    right: -791px;
+    top: 7px;
+  
+  }
+  body > header > div:nth-child(2) {
+    float: left;
+  }
+  
+  body > header > nav > a {
+    margin-left: 30px;
+  }
+  body > header > div:nth-child(2) {
+    float: left;
+    position: relative;
+    left: -570px;
+  }
+  header{
+    background-color: #111111;
+    padding: 25px;
+    height: 570px;
+    color:white;
+    
+  }
+  body > header > div.header-text > img {
+    position: relative;
+    top: 134px;
+    right: 607px;
+  }
+  body > header > div.header-text > h2 {
+    position: relative;
+    /* left: 53px; */
+    top: 100px;
+    font-size: 3.5em;
+}
+.header-text {
+    float: left;
+    padding-left: 90px;
+    padding-top: 128px;
+}
+body > header > div:nth-child(4) {
+    float: left;
+    position: relative;
+    right: -175px;
+    top: -378px;
+    width: 50%;
+}
+img.header-img {
+    width: 510px;
+    /* transform: scale(1.2); */
+}
+body > header > div.header-text > p {
+    position: relative;
+    top: 57px;
+    left: 7px;
+    color: gray;
+}
+img.logo {
+    width: 100px;
+    filter: color(red);
+    filter: invert(50%) sepia(97%) saturate(6997%) hue-rotate(342deg) brightness(96%) contrast(87%);
+}
+body > header > div.header-text > h5 {
+    position: absolute;
+    top: 255px;
+    color: #e52f3e;
+}
+button.about {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background: red;
+}
+.right{
+    width: 50%;
+    height: 800px;
+    background-color: black;
+    float: left;
+    ;
+  }
+  .left {
+    width: 50%;
+    height: 800px;
+    /* float: right; */
+    background-color: #181818;
+}
+.main {
+    position: absolute;
+    padding: 100px;
+    padding-left: 415px;
+    color: white;
+    width: auto;
+    height: 800px;
+}
+.cards {
+    width: 210px;
+    margin-left: 10px;
+    float: left;
+    height: 155px;
+    padding-top: 100px;
+    padding-left: 25px;
+    background: #1e1e1e;
+}
+.product{
+    background-color: red;
+}
+body > div > div.main > div:nth-child(1) > svg {
+    position: absolute;
+    top: 0px;
+    left: 375px;
+}
+
+body > div > div.main > div.cards.product > svg {
+    position: absolute;
+    top: 0px;
+    left: 618px;
+}
+body > div > div.main > div:nth-child(3) > svg {
+    position: absolute;
+    top: 0px;
+    left: 864px;
+}
+body > div > div.main > div:nth-child(4) {
+    width: 735px;
+    height: 274px;
+}
+.experience {
+    width: 210px;
+    height: 155px;
+    padding: 50px;
+    overflow: hidden;
+    float: left;
+}
+body > div > div.main > div.achievements > div > h1 {
+    text-align: center;
+    color: #e52f3e;
+    font-size: 4em;
+    margin:0;
+}
+body > div > div.main > div.achievements > div > h3 {
+    text-align: center;
+    margin: 0px;
+}
+.achievements {
+    padding-top: 100px;
+}
+.experience.plus {
+    width: 500px;
+    height: 310px;
+    text-align: unset;
+    padding-top: 10px;
+    
+}
+.small-cards {
+    background: #1e1e1e;
+    color: black;
+    width: 195px;
+    /* height: 85px; */
+    text-align: center;
+    float: left;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.small-cards >h3 {
+    font-size: 30px;
+    margin: 0;
+    color: red;
+}
+.small-cards > p {
+    margin: 0px;
+    color: #c3c3c3;
+}
+.projects {
+    height: 1500px;
+    background: black;
+    padding: 150px;
+    color: white;
+}
+button.view {
+    float: right;
+    padding: 10px;
+    color: white;
+    background: red;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+.project-card {
+    
+    width: 500px;
+    float: left;
+    height: 420px;
+    
+}
+.photo-holder {
+    width: 100%;
+    /* height: 280px; */
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #1e1e1e;
+}
+img.project-photo {
+    width: 500px;
+}
+body > div.projects > div.project-showcase > div:nth-child(2n) {
+    /* margin-left: 183px; */
+    float: right;
+}
+body > div.projects > div.project-showcase > div:nth-child(3) {
+    margin-top: 50px;
+}
+body > div.projects > div.project-showcase > div:nth-child(4) {
+    margin-top: 50px;
+}
+.work {
+    width: 100%;
+    /* height: 280px; */
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #1e1e1e;
+}
+.project {
+    width: unset;
+    margin-top: 200px;
+    height: 220px;
+    padding: 50px;
+    background: #1e1e1e;
+}
+.project-card.project> p {
+    width: 50%;
+}
+.project-card.project>h1 {
+    width: 50%;
+}
+.bottom-nav {
+    float: unset;
+    margin-right: 355px;
+    margin-top: 100px;
+}
+body > div.projects > div.project-showcase > div.bottom-nav > a {
+    margin-left: 60px;
+}
+footer{
+   
+    background:#1e1e1e;
+    padding: 50px;
+}
+body > header > div:nth-child(2) > img {
+    position: relative;
+    left: 100px;
+}
